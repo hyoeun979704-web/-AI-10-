@@ -1,0 +1,63 @@
+# 튜플형
+# 1.튜플 (1, 2, 3, 4)의 길이를 출력하라.
+>>> t1=1,2,3,4
+>>> len (t1)
+4
+
+# 2.튜플 (10, 20, 30)에서 첫 번째 값을 출력하라.
+>>> t1=10,20,30
+>>> print t1[0]
+10
+
+# 3.튜플 (10, 20, 30)을 리스트로 변환하여 출력하라.
+
+# 4.튜플 (1, 2, 3)에 (4, 5)를 붙여 새 튜플을 만들어 출력하라.
+>>> t1=1,2,3
+>>> t2=4,5
+>>> t3=t1+t2
+>>> print (t3)
+(1, 2, 3, 4, 5)
+
+# 5.튜플 (1, 2, 3, 2, 2)에서 숫자 2의 개수를 출력하라.
+>>> t1=1,2,3,2,2
+>>> print (t1.count(2))
+3
+
+# 6.튜플 (10, 20, 30)을 a, b, c로 언패킹하여 출력하라.
+>>> t1=10,20,30
+>>> a,b,c=t1
+>>> print (a,b,c)
+10 20 30
+
+# 7.튜플 (5, 1, 3)을 정렬된 리스트로 변환하여 출력하라.
+>>> t1=5,1,3
+>>> print (sorted(t1))
+[1, 3, 5]
+>>> t1=1,2,3
+
+# 8.튜플 안에 숫자 4가 있는지 True / False로 출력하라.
+>>> t1=1,2,3
+>>> print (4 in t1)
+False
+
+# 9.리스트 [1, 2, 3]을 튜플로 변환하여 출력하라.
+>>> a=[1,2,3]
+>>> print (tuple(a))
+(1, 2, 3)
+
+# 10.튜플이 수정 불가능한 자료형임을 코드로 확인해보라 (에러 발생 확인)
+#요소 추가
+>>> t1=1,2,3,4
+>>> t1.append (5)
+Traceback (most recent call last):
+  File "<python-input-44>", line 1, in <module>
+    t1.append (5)
+    ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+#요소 삭제
+>>> del t1[0]
+Traceback (most recent call last):
+  File "<python-input-48>", line 1, in <module>
+    del t1[0]
+        ~~^^^
+TypeError: 'tuple' object doesn't support item deletion
